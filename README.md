@@ -14,6 +14,7 @@ Este é uma aplicação simples de gerenciamento de estoque desenvolvida em Next
   <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
 </p>
+
 ## Funcionalidades
 
 - **Cadastro**: Cadastre novos produtos com nome, descrição, preço e quantidade em estoque, ou cadastre novos fornecedores com nome, endereço, telefone e email.

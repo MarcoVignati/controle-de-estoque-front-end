@@ -1,4 +1,4 @@
-import CadastrarProduto from "@/components/CadastrarProduto";
+import CadastrarProduto from "@/components/produto/CadastrarProduto";
 
 export default function CadastroProduto() {
 

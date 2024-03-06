@@ -2,13 +2,13 @@
 
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, useDisclosure, Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, Input } from "@nextui-org/react";
 import React, { useEffect, useState } from 'react';
-import EditIcon from "./EditIcon";
-import DeleteIcon from "./DeleteIcon";
+import EditIcon from "../icons/EditIcon";
+import DeleteIcon from "../icons/DeleteIcon";
 import Link from "next/link";
 
 export default function ListaProduto() {
 
-  const [listaProdutos, setListaProducts] = useState(Array);
+  const [listaProdutos, setListaProdutos] = useState(Array);
   const [nomeProduto, setNomeProduto] = useState(String)
   const [descricaoProduto, setDescricaoProduto] = useState(String)
   const [precoProduto, setPrecoProduto] = useState(String)
@@ -27,7 +27,7 @@ export default function ListaProduto() {
   async function getListaProduto() {
     const response = await fetch(apiUrl)
     const responseData: any = await response.json()
-    setListaProducts(responseData)
+    setListaProdutos(responseData)
   }
 
   function deletarProduto(id: String) {
@@ -73,7 +73,7 @@ export default function ListaProduto() {
 
   return (
     <section className="relative">
-      <Table className="w-4/6 h-fit m-auto">
+      <Table className="w-4/6 h-fit m-auto" aria-label="Lista de Produtos">
         <TableHeader>
           <TableColumn>Nome</TableColumn>
           <TableColumn>Descrição</TableColumn>
@@ -81,7 +81,7 @@ export default function ListaProduto() {
           <TableColumn className="text-center">Quantidade em estoque</TableColumn>
           <TableColumn className="text-center">Ações</TableColumn>
         </TableHeader>
-        <TableBody>
+        <TableBody emptyContent={"Não há produtos cadastrados."}>
           {listaProdutos.map((produto: any, i) =>
             <TableRow key={i} className="">
               <TableCell>{produto.nome}</TableCell>

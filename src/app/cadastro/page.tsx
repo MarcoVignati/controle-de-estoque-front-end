@@ -8,7 +8,7 @@ export default function Cadastro() {
         <a href="cadastro/produto">
           <Button color="primary">Produto</Button>
         </a>
-        <a href="/fornecedor">
+        <a href="cadastro/fornecedor">
           <Button color="primary">Fornecedor</Button>
         </a>
         <a href={`/`}>
